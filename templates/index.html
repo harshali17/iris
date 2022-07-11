@@ -1,1 +1,23 @@
+<html >
+<body>
+ <div class="IRIS">
+	<h1>Predict IRIS flower type</h1>
 
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="sepallength" placeholder="SepalLength" required="required" />
+        <input type="text" name="sepalwidth" placeholder="sepalwidth" required="required" />
+		<input type="text" name="petallength" placeholder="petallength" required="required" />
+		<input type="text" name="petalwidth" placeholder="petalwidth" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
